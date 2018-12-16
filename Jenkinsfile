@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-				sh 'cd build'
-                sh 'cmake ..'
-				sh 'cmake --build .'
+				sh 'cd build && conan install --build=missing ..'
+                sh 'cd build && cmake ..'
+				sh 'cd build && cmake --build .'
             }
         }
         stage('Test') { 
