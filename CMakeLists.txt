@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.8.12)
 project(jenkins-test-cpp)
 
+SET(GCC_COVERAGE_COMPILE_FLAGS "-Wall")
 add_definitions("-std=c++11")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
