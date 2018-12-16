@@ -8,6 +8,7 @@
 
 [requires]
     Poco/1.Y.Z
+    catch2/2.Y.Z
 
 [options]
 
@@ -25,6 +26,7 @@
 [full_requires]
     OpenSSL/1.0.2o@conan/stable:35ea421ef4c1d32898da44c28e3cc900bc6459dc
     Poco/1.9.0@pocoproject/stable:67516f54281f3227d74b2b66f92537d98ff1103d
+    catch2/2.5.0@bincrafters/stable:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
     zlib/1.2.11@conan/stable:1d877a3df840030e6a8abb74c5ffb9088d08b47a
 
 [full_options]

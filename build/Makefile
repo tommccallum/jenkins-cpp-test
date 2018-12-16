@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tom/Development/jenkins-cpp-test/build/CMakeFiles /home/tom/Development/jenkins-cpp-test/build/CMakeFiles/progress.marks
@@ -111,17 +122,70 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named mytestlib
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+mytestlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mytestlib
+.PHONY : mytestlib
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+mytestlib/fast:
+	$(MAKE) -f CMakeFiles/mytestlib.dir/build.make CMakeFiles/mytestlib.dir/build
+.PHONY : mytestlib/fast
+
+#=============================================================================
+# Target rules for targets named myprog
+
+# Build rule for target.
+myprog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myprog
+.PHONY : myprog
+
+# fast build rule for target.
+myprog/fast:
+	$(MAKE) -f CMakeFiles/myprog.dir/build.make CMakeFiles/myprog.dir/build
+.PHONY : myprog/fast
+
+#=============================================================================
+# Target rules for targets named myprog_test
+
+# Build rule for target.
+myprog_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myprog_test
+.PHONY : myprog_test
+
+# fast build rule for target.
+myprog_test/fast:
+	$(MAKE) -f tests/CMakeFiles/myprog_test.dir/build.make tests/CMakeFiles/myprog_test.dir/build
+.PHONY : myprog_test/fast
+
+src/lib.o: src/lib.cpp.o
+
+.PHONY : src/lib.o
+
+# target to build an object file
+src/lib.cpp.o:
+	$(MAKE) -f CMakeFiles/mytestlib.dir/build.make CMakeFiles/mytestlib.dir/src/lib.cpp.o
+.PHONY : src/lib.cpp.o
+
+src/lib.i: src/lib.cpp.i
+
+.PHONY : src/lib.i
+
+# target to preprocess a source file
+src/lib.cpp.i:
+	$(MAKE) -f CMakeFiles/mytestlib.dir/build.make CMakeFiles/mytestlib.dir/src/lib.cpp.i
+.PHONY : src/lib.cpp.i
+
+src/lib.s: src/lib.cpp.s
+
+.PHONY : src/lib.s
+
+# target to generate assembly for a file
+src/lib.cpp.s:
+	$(MAKE) -f CMakeFiles/mytestlib.dir/build.make CMakeFiles/mytestlib.dir/src/lib.cpp.s
+.PHONY : src/lib.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +193,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/myprog.dir/build.make CMakeFiles/myprog.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +202,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/myprog.dir/build.make CMakeFiles/myprog.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +211,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/myprog.dir/build.make CMakeFiles/myprog.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -157,8 +221,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... mytestlib"
+	@echo "... myprog"
+	@echo "... myprog_test"
+	@echo "... src/lib.o"
+	@echo "... src/lib.i"
+	@echo "... src/lib.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

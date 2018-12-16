@@ -1,3 +1,9 @@
 /home/tom/Development/jenkins-cpp-test/build/CMakeFiles/rebuild_cache.dir
-/home/tom/Development/jenkins-cpp-test/build/CMakeFiles/test.dir
 /home/tom/Development/jenkins-cpp-test/build/CMakeFiles/edit_cache.dir
+/home/tom/Development/jenkins-cpp-test/build/CMakeFiles/test.dir
+/home/tom/Development/jenkins-cpp-test/build/CMakeFiles/mytestlib.dir
+/home/tom/Development/jenkins-cpp-test/build/CMakeFiles/myprog.dir
+/home/tom/Development/jenkins-cpp-test/build/tests/CMakeFiles/rebuild_cache.dir
+/home/tom/Development/jenkins-cpp-test/build/tests/CMakeFiles/edit_cache.dir
+/home/tom/Development/jenkins-cpp-test/build/tests/CMakeFiles/myprog_test.dir
+/home/tom/Development/jenkins-cpp-test/build/tests/CMakeFiles/test.dir

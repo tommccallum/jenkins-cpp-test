@@ -25,6 +25,30 @@ set(CONAN_SHARED_LINKER_FLAGS_POCO_LIST "")
 set(CONAN_EXE_LINKER_FLAGS_POCO_LIST "")
 
 
+set(CONAN_CATCH2_ROOT "/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9")
+set(CONAN_INCLUDE_DIRS_CATCH2 "/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include")
+set(CONAN_LIB_DIRS_CATCH2 "/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/lib")
+set(CONAN_BIN_DIRS_CATCH2 )
+set(CONAN_RES_DIRS_CATCH2 )
+set(CONAN_SRC_DIRS_CATCH2 )
+set(CONAN_BUILD_DIRS_CATCH2 "/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/")
+set(CONAN_LIBS_CATCH2 )
+set(CONAN_DEFINES_CATCH2 )
+# COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
+set(CONAN_COMPILE_DEFINITIONS_CATCH2 )
+
+set(CONAN_C_FLAGS_CATCH2 "")
+set(CONAN_CXX_FLAGS_CATCH2 "")
+set(CONAN_SHARED_LINKER_FLAGS_CATCH2 "")
+set(CONAN_EXE_LINKER_FLAGS_CATCH2 "")
+
+# For modern cmake targets we use the list variables (separated with ;)
+set(CONAN_C_FLAGS_CATCH2_LIST "")
+set(CONAN_CXX_FLAGS_CATCH2_LIST "")
+set(CONAN_SHARED_LINKER_FLAGS_CATCH2_LIST "")
+set(CONAN_EXE_LINKER_FLAGS_CATCH2_LIST "")
+
+
 set(CONAN_OPENSSL_ROOT "/home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc")
 set(CONAN_INCLUDE_DIRS_OPENSSL "/home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/include")
 set(CONAN_LIB_DIRS_OPENSSL "/home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/lib")
@@ -88,7 +112,7 @@ set(CONAN_SETTINGS_COMPILER_VERSION "8")
 set(CONAN_SETTINGS_OS "Linux")
 set(CONAN_SETTINGS_OS_BUILD "Linux")
 
-set(CONAN_DEPENDENCIES Poco OpenSSL zlib)
+set(CONAN_DEPENDENCIES Poco catch2 OpenSSL zlib)
 # Storing original command line args (CMake helper) flags
 set(CONAN_CMD_CXX_FLAGS ${CONAN_CXX_FLAGS})
 
@@ -97,9 +121,11 @@ set(CONAN_CMD_C_FLAGS ${CONAN_C_FLAGS})
 # Defining accumulated conan variables for all deps
 
 set(CONAN_INCLUDE_DIRS "/home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d/include"
+			"/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
 			"/home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/include"
 			"/home/tom/.conan/data/zlib/1.2.11/conan/stable/package/1d877a3df840030e6a8abb74c5ffb9088d08b47a/include" ${CONAN_INCLUDE_DIRS})
 set(CONAN_LIB_DIRS "/home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d/lib"
+			"/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/lib"
 			"/home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/lib"
 			"/home/tom/.conan/data/zlib/1.2.11/conan/stable/package/1d877a3df840030e6a8abb74c5ffb9088d08b47a/lib" ${CONAN_LIB_DIRS})
 set(CONAN_BIN_DIRS  ${CONAN_BIN_DIRS})
@@ -108,6 +134,7 @@ set(CONAN_LIBS PocoMongoDB PocoNet PocoNetSSL PocoCrypto PocoData PocoDataSQLite
 set(CONAN_DEFINES "-DPOCO_STATIC=ON"
 			"-DPOCO_NO_AUTOMATIC_LIBS" ${CONAN_DEFINES})
 set(CONAN_CMAKE_MODULE_PATH "/home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d/"
+			"/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
 			"/home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/"
 			"/home/tom/.conan/data/zlib/1.2.11/conan/stable/package/1d877a3df840030e6a8abb74c5ffb9088d08b47a/" ${CONAN_CMAKE_MODULE_PATH})
 
@@ -159,6 +186,39 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_POCO_RELEASE_LIST} ${CONAN_CXX_FLAGS_POCO_RELEASE_LIST}>
                                                                   $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_POCO_RELEASE_LIST} ${CONAN_CXX_FLAGS_POCO_RELEASE_LIST}>
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_POCO_DEBUG_LIST}  ${CONAN_CXX_FLAGS_POCO_DEBUG_LIST}>)
+ 
+
+    conan_package_library_targets("${CONAN_LIBS_CATCH2}" "${CONAN_LIB_DIRS_CATCH2}"
+                                  CONAN_PACKAGE_TARGETS_CATCH2 "" "" catch2)
+    conan_package_library_targets("${CONAN_LIBS_CATCH2_DEBUG}" "${CONAN_LIB_DIRS_CATCH2_DEBUG}"
+                                  CONAN_PACKAGE_TARGETS_CATCH2_DEBUG "" "debug" catch2)
+    conan_package_library_targets("${CONAN_LIBS_CATCH2_RELEASE}" "${CONAN_LIB_DIRS_CATCH2_RELEASE}"
+                                  CONAN_PACKAGE_TARGETS_CATCH2_RELEASE "" "release" catch2)
+
+    add_library(CONAN_PKG::catch2 INTERFACE IMPORTED)
+
+    # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
+    set_property(TARGET CONAN_PKG::catch2 PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_CATCH2} ${CONAN_SHARED_LINKER_FLAGS_CATCH2_LIST} ${CONAN_EXE_LINKER_FLAGS_CATCH2_LIST}
+                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_CATCH2_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_CATCH2_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_CATCH2_RELEASE_LIST}>
+                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_CATCH2_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_CATCH2_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_CATCH2_RELEASE_LIST}>
+                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_CATCH2_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_CATCH2_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_CATCH2_RELEASE_LIST}>
+                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_CATCH2_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_CATCH2_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_CATCH2_DEBUG_LIST}>
+                                                                 )
+    set_property(TARGET CONAN_PKG::catch2 PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_CATCH2}
+                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_CATCH2_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_CATCH2_RELEASE}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_CATCH2_RELEASE}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_CATCH2_DEBUG}>)
+    set_property(TARGET CONAN_PKG::catch2 PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_CATCH2}
+                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_CATCH2_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_CATCH2_RELEASE}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_CATCH2_RELEASE}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_CATCH2_DEBUG}>)
+    set_property(TARGET CONAN_PKG::catch2 PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_CATCH2_LIST} ${CONAN_CXX_FLAGS_CATCH2_LIST}
+                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_CATCH2_RELEASE_LIST} ${CONAN_CXX_FLAGS_CATCH2_RELEASE_LIST}>
+                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_CATCH2_RELEASE_LIST} ${CONAN_CXX_FLAGS_CATCH2_RELEASE_LIST}>
+                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_CATCH2_RELEASE_LIST} ${CONAN_CXX_FLAGS_CATCH2_RELEASE_LIST}>
+                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_CATCH2_DEBUG_LIST}  ${CONAN_CXX_FLAGS_CATCH2_DEBUG_LIST}>)
  
 
     conan_package_library_targets("${CONAN_LIBS_OPENSSL}" "${CONAN_LIB_DIRS_OPENSSL}"
@@ -226,7 +286,7 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_ZLIB_RELEASE_LIST} ${CONAN_CXX_FLAGS_ZLIB_RELEASE_LIST}>
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_ZLIB_DEBUG_LIST}  ${CONAN_CXX_FLAGS_ZLIB_DEBUG_LIST}>)
  
-    set(CONAN_TARGETS CONAN_PKG::Poco CONAN_PKG::OpenSSL CONAN_PKG::zlib)
+    set(CONAN_TARGETS CONAN_PKG::Poco CONAN_PKG::catch2 CONAN_PKG::OpenSSL CONAN_PKG::zlib)
 
 endmacro()
 

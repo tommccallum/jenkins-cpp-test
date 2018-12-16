@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.11.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.11.2/CMakeSystem.cmake"
   "conanbuildinfo.cmake"
+  "../tests/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
@@ -41,9 +42,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/test.dir/DependInfo.cmake"
+  "CMakeFiles/mytestlib.dir/DependInfo.cmake"
+  "CMakeFiles/myprog.dir/DependInfo.cmake"
+  "tests/CMakeFiles/myprog_test.dir/DependInfo.cmake"
   )

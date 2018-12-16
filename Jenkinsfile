@@ -15,7 +15,9 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh 'echo "Test"'
+                dir('build') {
+					sh 'ctest -V'
+				}
             }
         }
         stage('Deploy') { 

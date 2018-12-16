@@ -1,10 +1,12 @@
 [includedirs]
 /home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d/include
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include
 /home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/include
 /home/tom/.conan/data/zlib/1.2.11/conan/stable/package/1d877a3df840030e6a8abb74c5ffb9088d08b47a/include
 
 [libdirs]
 /home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d/lib
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/lib
 /home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/lib
 /home/tom/.conan/data/zlib/1.2.11/conan/stable/package/1d877a3df840030e6a8abb74c5ffb9088d08b47a/lib
 
@@ -16,6 +18,7 @@
 
 [builddirs]
 /home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d/
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/
 /home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/
 /home/tom/.conan/data/zlib/1.2.11/conan/stable/package/1d877a3df840030e6a8abb74c5ffb9088d08b47a/
 
@@ -112,6 +115,46 @@ POCO_NO_AUTOMATIC_LIBS
 /home/tom/.conan/data/Poco/1.9.0/pocoproject/stable/package/67516f54281f3227d74b2b66f92537d98ff1103d
 
 
+[includedirs_catch2]
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include
+
+[libdirs_catch2]
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/lib
+
+[bindirs_catch2]
+
+
+[resdirs_catch2]
+
+
+[builddirs_catch2]
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/
+
+[libs_catch2]
+
+
+[defines_catch2]
+
+
+[cppflags_catch2]
+
+
+[cflags_catch2]
+
+
+[sharedlinkflags_catch2]
+
+
+[exelinkflags_catch2]
+
+
+[sysroot_catch2]
+
+
+[rootpath_catch2]
+/home/tom/.conan/data/catch2/2.5.0/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+
+
 [includedirs_OpenSSL]
 /home/tom/.conan/data/OpenSSL/1.0.2o/conan/stable/package/35ea421ef4c1d32898da44c28e3cc900bc6459dc/include
 
@@ -195,8 +238,10 @@ z
 
 
 [USER_Poco]
+[USER_catch2]
 [USER_zlib]
 [USER_OpenSSL]
 [ENV_Poco]
+[ENV_catch2]
 [ENV_OpenSSL]
 [ENV_zlib]
