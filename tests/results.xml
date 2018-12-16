@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="myprog_test" errors="0" failures="0" tests="0" hostname="tbd" time="4e-06" timestamp="2018-12-16T14:22:34Z">
+    <system-out/>
+    <system-err/>
+  </testsuite>
+</testsuites>

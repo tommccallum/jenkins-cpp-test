@@ -1,21 +1,18 @@
-Start testing: Dec 16 14:03 GMT
+Start testing: Dec 16 14:22 GMT
 ----------------------------------------------------------
 1/1 Testing: myprog
 1/1 Test: myprog
-Command: "/home/tom/Development/jenkins-cpp-test/build/bin/myprog_test"
+Command: "/home/tom/Development/jenkins-cpp-test/build/bin/myprog_test" "-r" "junit" "-o" "results.xml"
 Directory: /home/tom/Development/jenkins-cpp-test/tests
-"myprog" start time: Dec 16 14:03 GMT
+"myprog" start time: Dec 16 14:22 GMT
 Output:
 ----------------------------------------------------------
-===============================================================================
-No tests ran
-
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"myprog" end time: Dec 16 14:03 GMT
+"myprog" end time: Dec 16 14:22 GMT
 "myprog" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 16 14:03 GMT
+End testing: Dec 16 14:22 GMT
