@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="myprog_test" errors="0" failures="0" tests="1" hostname="tbd" time="6.2e-05" timestamp="2018-12-16T14:58:23Z">
-    <testcase classname="myprog_test.global" name="Always True" time="0.00003"/>
+  <testsuite name="myprog_test" errors="0" failures="0" tests="1" hostname="tbd" time="0.121817" timestamp="2018-12-16T15:29:05Z">
+    <testcase classname="myprog_test.global" name="Always True" time="0.03486"/>
     <system-out/>
     <system-err/>
   </testsuite>

@@ -8,4 +8,3 @@ target_link_libraries(myprog_test mytestlib ${CONAN_LIBS})
 add_test(NAME myprog
 		 WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 		 COMMAND ${CMAKE_BINARY_DIR}/bin/myprog_test -r junit -o ${CMAKE_BINARY_DIR}/results.xml)
-

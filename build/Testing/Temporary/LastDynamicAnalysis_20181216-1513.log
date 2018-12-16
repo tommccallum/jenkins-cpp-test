@@ -1,0 +1,18 @@
+Start testing: Dec 16 15:29 GMT
+----------------------------------------------------------
+1/1 Testing: myprog
+1/1 Test: myprog
+Command: "/usr/bin/valgrind" "--log-file=/home/tom/Development/jenkins-cpp-test/build/Testing/Temporary/MemoryChecker.1.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tom/Development/jenkins-cpp-test/build/bin/myprog_test" "-r" "junit" "-o" "/home/tom/Development/jenkins-cpp-test/build/results.xml"
+Directory: /home/tom/Development/jenkins-cpp-test/tests
+"myprog" start time: Dec 16 15:29 GMT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.92 sec
+----------------------------------------------------------
+Test Passed.
+"myprog" end time: Dec 16 15:29 GMT
+"myprog" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 16 15:29 GMT

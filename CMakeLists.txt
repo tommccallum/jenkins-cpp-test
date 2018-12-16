@@ -21,5 +21,11 @@ add_library(mytestlib STATIC ${PROJECT_SOURCE})
 add_executable(myprog ${PROJECT_MAIN})
 target_link_libraries(myprog mytestlib ${CONAN_LIBS})
 
+# required for Valgrind tests
+include (CTest)
+add_custom_target(myprog_memtest ALL
+         COMMAND ${CMAKE_CTEST_COMMAND} --force-new-ctest-process --leak-check=yes --test-action memcheck
+         COMMAND cat "${CMAKE_BINARY_DIR}/Testing/Temporary/MemoryChecker.*.log")
+
 enable_testing()
 add_subdirectory(tests)
